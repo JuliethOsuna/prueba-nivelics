@@ -1,0 +1,28 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+  <input
+    formControlName="nombre"
+    placeholder="Nombre completo"
+    type="text"
+  >
+  <input
+    formControlName="correo"
+    placeholder="Correo electronico"
+    type="email"
+  >
+  <input
+    formControlName="telefono"
+    placeholder="Telefono"
+    type="tel"
+  >
+  <input
+    formControlName="fecha_de_nacimiento"
+    placeholder="Fecha de nacimiento"
+    type="date"
+  >
+  <button type="submit">Enviar</button>
+</form>
+
+<div>{{userForm.value.nombre}}</div>
+<div>{{userForm.value.correo}}</div>
+<div>{{userForm.value.telefono}}</div>
+<div>{{userForm.value.fecha_de_nacimiento}}</div>
