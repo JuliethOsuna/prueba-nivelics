@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { RedBottonComponent } from './red-botton/red-botton/red-botton.component
 import { UserButtonComponent } from './user-button/user-button/user-button.component';
 import { UserFormComponent } from './user-form/user-form/user-form.component';
 import { ShowUserComponent } from './show-user/show-user/show-user.component';
+import { UserServerComponent } from './user-server/user-server/user-server.component';
+import { httpInterceptorProviders } from './interceptors';
 
 @NgModule({
   declarations: [
@@ -19,15 +22,17 @@ import { ShowUserComponent } from './show-user/show-user/show-user.component';
     RedBottonComponent,
     UserButtonComponent,
     UserFormComponent,
-    ShowUserComponent
+    ShowUserComponent,
+    UserServerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

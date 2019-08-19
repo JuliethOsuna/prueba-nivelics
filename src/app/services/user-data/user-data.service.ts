@@ -12,6 +12,5 @@ export class UserDataService {
 
   setUserData(userData){
     this.userDataSubject$.next(userData);
-    console.log(userData);
   }
 }

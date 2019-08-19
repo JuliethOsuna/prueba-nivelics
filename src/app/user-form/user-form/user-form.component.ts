@@ -26,7 +26,6 @@ export class UserFormComponent  {
 
    submitForm() {
      let userData = this.userForm.value;
-     console.log(userData);
      this.userDataService.setUserData(userData);
    }
 
