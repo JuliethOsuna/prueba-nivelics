@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { UserDataService } from '../../services/user-data/user-data.service'
 
 @Component({
   selector: 'app-user-form',
@@ -12,7 +13,8 @@ export class UserFormComponent  {
   userInfo: object;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private userDataService: UserDataService,
   ) {
     this.userForm = this.fb.group({
       nombre: ['', Validators.required],
@@ -23,8 +25,9 @@ export class UserFormComponent  {
    }
 
    submitForm() {
-     let credentials = this.userForm.value;
-     console.log(credentials);
+     let userData = this.userForm.value;
+     console.log(userData);
+     this.userDataService.setUserData(userData);
    }
 
 

@@ -9,6 +9,7 @@ import { BlueBottonComponent } from './blue-botton/blue-botton/blue-botton.compo
 import { RedBottonComponent } from './red-botton/red-botton/red-botton.component';
 import { UserButtonComponent } from './user-button/user-button/user-button.component';
 import { UserFormComponent } from './user-form/user-form/user-form.component';
+import { ShowUserComponent } from './show-user/show-user/show-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserFormComponent } from './user-form/user-form/user-form.component';
     BlueBottonComponent,
     RedBottonComponent,
     UserButtonComponent,
-    UserFormComponent
+    UserFormComponent,
+    ShowUserComponent
   ],
   imports: [
     BrowserModule,
